@@ -1,14 +1,18 @@
 export async function criarCalibracao(calibracao) {
+    const sql = "insert into calibracoes values equipamentoId, dataCalibracao, resultado, responsavel = (?, ?, ?, ?)"
 }
 
 export async function listarCalibracoes() {
     const sql = "select * from calibracoes"
+    return sql
 }
 
 export async function listarCalibracoesDetalhadas() {
 }
 
 export async function buscarCalibracaoPorId(id) {
+    const sql = "select * from calibracoes where id = (?)"
+    return sql(id)
 }
 
 export async function atualizarCalibracao(id, calibracao) {
